@@ -27,8 +27,7 @@ function LoginForm() {
         if (isInputValid()) {
             console.log("Seu email é: ", email)
             console.log("Sua senha é: ", password)
-            context.setIsAuthenticated(true)
-            localStorage.setItem('isAuthenticated', true)
+            context.login()
             navigate('/')
         } else {
             console.log('Campos Inválidos')
